@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// mongo db connection
+// mongo db connection settings need to be configured in heroku
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pizza-hunt', {
   useNewUrlParser: true,
   useUnifiedTopology: true
